@@ -17,15 +17,6 @@
   </p>
 
   <p>
-    <img alt="Foundation black" src="https://img.shields.io/badge/FOUNDATION-%23030806-030806?style=flat-square&labelColor=030806">
-    <img alt="Panel dark green" src="https://img.shields.io/badge/PANELS-%23123C30-123C30?style=flat-square&labelColor=123C30">
-    <img alt="Structure teal" src="https://img.shields.io/badge/STRUCTURE-%232E8F79-2E8F79?style=flat-square&labelColor=2E8F79">
-    <img alt="Signal phosphor green" src="https://img.shields.io/badge/SIGNAL-%2378E89A-78E89A?style=flat-square&labelColor=123C30">
-    <img alt="Text pale mint" src="https://img.shields.io/badge/TEXT-%23D8F5D5-D8F5D5?style=flat-square&labelColor=123C30">
-    <img alt="Activity amber" src="https://img.shields.io/badge/ACTIVITY-%23E7A83A-E7A83A?style=flat-square&labelColor=123C30">
-  </p>
-
-  <p>
     <a href="#overview">Overview</a> ·
     <a href="#features">Features</a> ·
     <a href="#sim-settlements-2-integration">SS2 Integration</a> ·
