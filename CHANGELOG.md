@@ -16,6 +16,8 @@
 - **Fixed:** Sim Settlements 2 details no longer hide the Settlement Updates bar while a network pass is running.
 - **Fixed:** Loading a save no longer spams "Save cache skipped; character id was not ready yet." Saved settlement data now loads once the character id is available.
 
+
+
 ### 🔄 Changes
 
 - Saved settlement data is restored as soon as a save loads, so NODE already has last session's picture before you open the dashboard.
@@ -23,11 +25,25 @@
 - Console and log messages are now clearer to their porpuse and meaning
 - Sim Settlements 2 detail traces now require Console Debug to be enabled, otherwise they would spam the console.
 
+
+
 ### 🌿 QoL Improvements
 
 - The changelog sits on a dark translucent panel so the text stays readable over the dashboard background.
 - NODE now adapts text, controls, tables, navigation, the status panel, and background visuals for compact displays, 1440p, ultrawide, and 4K resolutions.
 - Compact displays now reorganize settlement information and provide scrolling where needed to keep the complete population roster accessible.
+
+
+
+### 👊 Special Thanks
+
+I want to thank the following users for reporting issues and helping me test this new version:  
+
+- @wysiwyg  
+- @DarkZZZ  
+- @tanmau
+
+
 
 ## [0.1.0] - 2026-08-27
 
