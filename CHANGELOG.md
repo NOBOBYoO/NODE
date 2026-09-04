@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.0] - 2026-09-04
+
+### 🔄 Changes
+
+- NODE now requires **PrismaUI F4 2.1**. Update Prisma before updating NODE; older Prisma UI builds are no longer supported.
+- The dashboard uses Prisma 2.1's current view lifecycle: panel role, focus, Escape handling, and game-thread page events. Gamepad controller actions are not enabled yet and will come in a later update.
+- Settlement Updates now shows what kind of refresh is running (totals, recent changes, a full check, or indexing) and how far it has got (for example **7 / 20**), instead of naming each workshop in turn.
+- Heavy world checks now run when something actually changed, not on every routine pass, so longer play sessions stay smoother.
+
+### 🛠️ Fixes
+
+- **Fixed:** Greatly reduced hitches caused by background updates and constant updated UI paint
+- **Fixed:** NODE now only updates the UI on actual value changes.
+
 ## [0.1.1] - 2026-08-31
 
 ### ✨ Additions
@@ -48,4 +62,3 @@ I want to thank the following users for reporting issues and helping me test thi
 ## [0.1.0] - 2026-08-27
 
 - First beta release.
-
