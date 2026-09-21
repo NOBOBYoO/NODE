@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.4.0] - 2026-09-21
+
+### 🔄 Changes
+
+- NODE now requires **PrismaUI F4 2.1.1**. Update Prisma before updating NODE; older Prisma UI builds are no longer supported.
+- On a new game, the Network page now shows that no workshops are owned yet, and that settlement updates only start after a workshop is claimed.
+- **Settlements Update Bar** is now **Scans Update Bar**.
+- Settings → Systems now includes **Scans System**, with **Scans Update Bar** nested under it to show or hide the bar at the top of the menu.
+- **Scans System** now includes an **Advanced** toggle for extra scan settings.
+- Sub-settings now sit indented under their parent, including renaming, scans, and console.
+
+### 🛠️ Fixes
+
+- Starting a new game no longer stutters every couple of seconds. NODE was still checking for settlements every 2 seconds even though no workshops were owned yet.
+- Turning off **Scans Update Bar** no longer shifts the dashboard up. The bar hides, and the space at the top stays in place.
+
 ## [0.3.0] - 2026-09-14
 
 ### ✨ Additions

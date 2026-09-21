@@ -71,7 +71,7 @@ Settlement information stays ready while you play. The dashboard can open quickl
 - Scale the whole dashboard from Settings to fit your screen.
 - Give generic settlers first names and surnames with the Settlers Renaming System. Unique named people are left alone.
 - Adjust background refresh timing for different systems and save sizes.
-- Hide the Settlements Update Bar while keeping background updates active.
+- Hide the Scans Update Bar while keeping background updates active.
 - Reduce interface animation for smoother use on large settlement networks.
 - NODE appears in the Prisma Dock on the ESC menu.
 - Optionally enable the Console page in Debug settings for status and troubleshooting.
@@ -116,9 +116,9 @@ Choose the Address Library package that matches your Old-Gen, Next-Gen, or Anniv
 
 ### 🖥️ PrismaUI F4
 
-[![PrismaUI F4 version](https://img.shields.io/badge/PRISMAUI_F4-2.1-E7A83A?style=for-the-badge&labelColor=123C30)](https://www.nexusmods.com/fallout4/mods/105454)
+[![PrismaUI F4 version](https://img.shields.io/badge/PRISMAUI_F4-2.1.1-E7A83A?style=for-the-badge&labelColor=123C30)](https://www.nexusmods.com/fallout4/mods/105454)
 
-NODE currently targets **PrismaUI F4 2.1**. Older Prisma UI builds are not supported.
+NODE currently targets **PrismaUI F4 2.1.1**. Older Prisma UI builds are not supported.
 
 ### 🛠️ Workshop Framework
 
@@ -133,7 +133,7 @@ Use **Workshop Framework 2.5.0 or newer**, including the author-provided Old-Gen
 Use **Sim Settlements 2 3.6.0 or newer**. The base SS2 installation or the corresponding All Chapters Pack is supported.
 
 > [!IMPORTANT]
-> **NODE requires PrismaUI F4 2.1.** Update Prisma before updating NODE.
+> **NODE requires PrismaUI F4 2.1.1.** Update Prisma before updating NODE.
 >
 > **`NODE.esp` is required and must be enabled.** It provides the companion quest used for SS2 settlement details and supported resident-management controls.
 
@@ -160,7 +160,7 @@ Use **Sim Settlements 2 3.6.0 or newer**. The base SS2 installation or the corre
 
 Install the new version over the existing NODE installation and allow your mod manager to replace the older packaged files.
 
-**NODE requires PrismaUI F4 2.1.** Update Prisma before updating NODE. Older Prisma UI builds will not open the dashboard.
+**NODE requires PrismaUI F4 2.1.1.** Update Prisma before updating NODE. Older Prisma UI builds will not open the dashboard.
 
 `NODE.ini` is created automatically on first launch and is **not shipped in release archives**. Updating NODE therefore does not replace your existing preferences; newly introduced settings are added only when missing.
 
@@ -170,7 +170,7 @@ Install the new version over the existing NODE installation and allow your mod m
 2. Use **Network Overview** to compare all owned settlements.
 3. Use **Settlement Overview** to inspect one settlement in detail.
 4. Open the **Population** tab to review residents and supported assignments.
-5. Use **Settings** to change the open key, theme, Interface scale, settler renaming, refresh timing, motion, Settlements Update Bar, and Console.
+5. Use **Settings** to change the open key, theme, Interface scale, settler renaming, refresh timing, motion, Scans Update Bar, and Console.
 6. Press **Esc** to close NODE.
 
 NODE begins building its settlement information after the game is ready. Large or heavily modded saves can take longer to complete their first network-wide update, but already prepared settlement information remains available as newer results arrive.
@@ -178,7 +178,7 @@ NODE begins building its settlement information after the game is ready. Large o
 ## Support and troubleshooting
 
 - **Missing SS2 details:** Confirm that `NODE.esp`, Workshop Framework, and Sim Settlements 2 are enabled and that their versions match your game runtime.
-- **NODE does not open:** Confirm that Fallout 4 was launched through F4SE and that PrismaUI F4 **2.1** is installed. Older Prisma UI builds are not supported.
+- **NODE does not open:** Confirm that Fallout 4 was launched through F4SE and that PrismaUI F4 **2.1.1** is installed. Older Prisma UI builds are not supported.
 - **Interface hitching:** 0.3.0 keeps background updates gentler. If it still feels busy on a large save, enable **Reduce Animations** or increase the complete settlement update interval in Settings.
 - **Log location:** `Documents\My Games\Fallout4\F4SE\NODE.log`.
 
