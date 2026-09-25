@@ -1,5 +1,38 @@
 # Changelog
 
+## [0.5.0] - 2026-09-25
+
+### 🛠️ Fallout 4 1.10.163 Support Changes
+
+> **Fallout 4 1.10.163** is now fully supported.
+> Before this update, players on that version, could not load a save with NODE. The following notes represent what has changed to support this game version.
+>
+> OG is handled on its own internal module, separate from Next-Gen and Anniversary Edition, because some of NODE's systems froze that game version. Some of OG Settlement updates follow a different path than on newer versions, to avoid stalling the game.
+
+- Settlements update one at a time instead of freezing the game shortly after load. The update bar shows the pass, waits **15 seconds**, then reads them again.
+- Population Table and Settlers Renaming System only update as people move in or leave settlements.
+- The **Caravan Network** card shows how many settlements are linked by provisioner routes, and a note that
+- Full caravan resources are not supported on this game version. Shared caps, virtual storage, and material totals stay hidden. Next-gen and Anniversary Edition still show the full resource card.
+
+> The following changes are general NODE changes like any other version:
+
+### 🔄 Changes
+
+- A full settlement read now takes about **3 seconds** while the dashboard is open, and about **10 seconds** while it is closed.
+- If Sim Settlements details stop updating, NODE tries them again **30 seconds** later. Those details no longer stay off for the rest of the session. This would happen in cases where the player would stay IDLE in situations where the game timescale is set to 0.
+
+### 🛠️ Fixes
+
+- **Fallout 4 1.10.163** no longer freezes on the main menu when loading a save.
+- The NODE badge now properly shows in the Prisma dock.
+
+### 👊 Special Thanks
+
+Thanks to these players for debugging and playtesting this version on Fallout 4 1.10.163:
+
+- [tanmau](https://www.nexusmods.com/profile/tanmau?gameId=1151)
+- [DarkZZZ](https://www.nexusmods.com/profile/DarkZZZ)
+
 ## [0.4.0] - 2026-09-21
 
 ### 🔄 Changes
@@ -42,7 +75,7 @@
 ### 🔄 Changes
 
 - NODE now requires **PrismaUI F4 2.1**. Update Prisma before updating NODE; older Prisma UI builds are no longer supported.
-- The dashboard uses Prisma 2.1's current view lifecycle: panel role, focus, Escape handling, and game-thread page events. Gamepad controller actions are not enabled yet and will come in a later update.
+- The dashboard opens, closes, and takes keyboard input with Prisma 2.1. Gamepad controls are not included yet.
 - Settlement Updates now shows what kind of refresh is running (totals, recent changes, a full check, or indexing) and how far it has got (for example **7 / 20**), instead of naming each workshop in turn.
 - Heavy world checks now run when something actually changed, not on every routine pass, so longer play sessions stay smoother.
 
@@ -65,16 +98,16 @@
 - **Fixed:** The Settlement Updates bar now fills left to right across the whole network instead of jumping to a few of the same settlements.
 - **Fixed:** Opening the dashboard no longer wipes an in-progress update, so the bar keeps showing the current settlement.
 - **Fixed:** Sim Settlements 2 details no longer hide the Settlement Updates bar while a network pass is running.
-- **Fixed:** Loading a save no longer spams "Save cache skipped; character id was not ready yet." Saved settlement data now loads once the character id is available.
+- **Fixed:** Loading a save no longer repeats a "character id was not ready" message. Saved settlement data loads once the character is available.
 
 
 
 ### 🔄 Changes
 
-- Saved settlement data is restored as soon as a save loads, so NODE already has last session's picture before you open the dashboard.
-- Settlement scans no longer start during save load but rather post-load, this should reduce the workload during save load.
-- Console and log messages are now clearer to their porpuse and meaning
-- Sim Settlements 2 detail traces now require Console Debug to be enabled, otherwise they would spam the console.
+- Saved settlement data is restored as soon as a save loads, so last session's settlements are already there when the dashboard opens.
+- Settlement updates wait until the save has finished loading, so loading a save is lighter.
+- Console and log messages are clearer.
+- Sim Settlements 2 detail lines appear in the console only when Console Debug is on.
 
 
 
