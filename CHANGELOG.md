@@ -1,5 +1,44 @@
 # Changelog
 
+## [0.6.0] - 2026-10-10
+
+### ✨ Additions
+
+- Added a **Plots** tab to each settlement. It lists every Sim Settlements 2 plot with its type, building plan, owner, occupants (current and max), level and size.
+- Added the **Plot Profile** window, opened by selecting a plot. It shows the plot's stage model, its occupants and their status, building plan progress, power, operating costs, and its benefits and penalties with readable resource names. When the current stage's model can't be shown, another stage's model is shown instead, or **Model Not Available**. While another settler action is still running, the plot's last known details show right away with a notice. Occupant names open their settler profile, and closing it returns to the plot.
+- Added **Assign / Reassign** to the Plot Profile, to pick a settler from the same settlement. The picker shows each settler's current job or home, highlights the SPECIAL stats SS2 uses for that building class, and lists the best fit first. On full plots it offers to replace an occupant, and an owner can be replaced outright or moved down to occupant.
+- Added plot actions to the Plot Profile: refresh the plot, set its upgrade mode (settlement default, automatic or manual), and open SS2's plot menu or building plan selector. Demolish and scrap stay in SS2's own menu.
+- Added a **Nobody's Leaders 3 compatibility** setting under the Settlers Renaming System. It only appears when Nobody's Leaders 3 is installed, and is on by default. Settlers that Nobody's Leaders 3 names after their settlement, such as Caroline Tenpines, keep those names everywhere, and any of them NODE renamed before get their Nobody's Leaders 3 name back.
+- Added plot assignment to the settler profile. Settlers can be assigned to a home, job or hobby plot in their settlement, or moved from the one they have, without opening each plot first. The picker groups plots by the assignments Sim Settlements 2 allows on them, and full plots are listed but can't be picked. A home, job or hobby on a Sim Settlements 2 plot opens that plot's Plot Profile, and closing it returns to the settler.
+- Added **Unassign hobby** to the settler profile, so a hobby plot can be freed the same way as a bed or job.
+- Added a **Status** section to the settler profile, shown once Sim Settlements 2's advanced settler readings are unlocked: health, rads, vigor rating, and up to three ailments (injuries and diseases).
+- Added a **Sim Settlements 2 disclosure** to the About page.
+
+### 🔄 Changes
+
+- Redesigned the settler profile. It now opens as a centered window, laid out like the Plot Profile, instead of the side panel, so everything about a settler is visible at once.
+  - SPECIAL, info, assignments, flags and actions now sit side by side instead of in one long column.
+  - The header shows the settler's name. An info column lists their type, settlement, role and bed, and flags a missing home or bed.
+  - Home, job and hobby each have their own row, with buttons to open or change that plot.
+  - Unassign, Move to Player and Transfer moved to an actions column on the right.
+- Redesigned the **Scans Update Bar** as the **Status Indicator**, a compact pill at the top of the menu.
+  - Settlement updates and Sim Settlements updates now show separately, with the current settlement, step and plots.
+  - Selecting the pill opens details with recent activity and any waits on settler moves.
+  - It only redraws when something changes, so the menu does less work while it is open.
+  - Renamed its Settings toggle to **Status Indicator**.
+- Changed native settlement audits and Sim Settlements 2 details to run on separate schedules: native audits every **120 seconds** and SS2 details every **180 seconds** by default, both under **Settings → Systems → Scans System → Advanced**. Full SS2 detail passes also wait while a settler action is running, so they no longer slow down settler changes.
+- Changed the native audit setting to **120 seconds** for settings still on the old **30-second** default. This happens once, and custom values are kept.
+- Changed settlement scans to skip repeated work, so background updates cost less during play. A changed settlement refreshes on its own instead of the whole list, Sim Settlements readings NODE already has are skipped, and the open settlement's plot details load faster.
+- Changed where dashboard data is stored: each save's F4SE co-save, instead of one file per character, written only when the game saves. After loading a save, the dashboard opens right away with that save's own last known settlements, settlers and plots, then refreshes them in the background. Old files in **Data\F4SE\Plugins\NODE\cache** are removed on launch.
+- Changed the Settlers Renaming System to keep its record of renamed settlers in each save instead of one file per character, so turning renaming off restores the right names for that save. Settlers who have died or left the game are dropped from the record, and an older save reads its character's old list once.
+
+### 🛠️ Fixes
+
+- Fixed loading an older save briefly showing settlements and settlers from a later point of the same character.
+- Fixed the Population list showing **Settler** for settlers that other mods name through quests. Their given names now show.
+- Fixed a settler change being dropped without notice when settler options were opened, or another change was made, before it started. Changes now wait in a short queue and report a failure if they can't run.
+- Fixed the Settlers Renaming System skipping unnamed settlers called **Worker**, such as the ghouls at The Slog. They are now renamed with **Worker** kept in brackets, like faction settlers.
+
 ## [0.5.0] - 2026-09-25
 
 ### 🛠️ Fallout 4 1.10.163 Support Changes
@@ -100,8 +139,6 @@ Thanks to these players for debugging and playtesting this version on Fallout 4 
 - **Fixed:** Sim Settlements 2 details no longer hide the Settlement Updates bar while a network pass is running.
 - **Fixed:** Loading a save no longer repeats a "character id was not ready" message. Saved settlement data loads once the character is available.
 
-
-
 ### 🔄 Changes
 
 - Saved settlement data is restored as soon as a save loads, so last session's settlements are already there when the dashboard opens.
@@ -109,15 +146,11 @@ Thanks to these players for debugging and playtesting this version on Fallout 4 
 - Console and log messages are clearer.
 - Sim Settlements 2 detail lines appear in the console only when Console Debug is on.
 
-
-
 ### 🌿 QoL Improvements
 
 - The changelog sits on a dark translucent panel so the text stays readable over the dashboard background.
 - NODE now adapts text, controls, tables, navigation, the status panel, and background visuals for compact displays, 1440p, ultrawide, and 4K resolutions.
 - Compact displays now reorganize settlement information and provide scrolling where needed to keep the complete population roster accessible.
-
-
 
 ### 👊 Special Thanks
 
@@ -127,8 +160,7 @@ I want to thank the following users for reporting issues and helping me test thi
 - @DarkZZZ  
 - @tanmau
 
-
-
 ## [0.1.0] - 2026-08-27
 
 - First beta release.
+

@@ -6,7 +6,7 @@
   <h1>NODE — Settlement Network Dashboard</h1>
 
   <p>
-    <strong>Your settlement network, ready when you need it.</strong><br>
+    <strong>Your whole network of settlements, in one place.</strong><br>
     A fast in-game dashboard for Fallout 4 and Sim Settlements 2.
   </p>
 
@@ -32,7 +32,7 @@
 
 NODE brings your entire settlement network into one clear in-game dashboard. Open it from anywhere to compare settlements, review local needs, inspect residents, and manage supported assignments without travelling from workshop to workshop.
 
-Settlement information stays ready while you play. The dashboard can open quickly with previously collected data and continues refreshing quietly in the background, so there is no manual scan to run before it becomes useful.
+Settlement information stays ready while you play. Each save keeps its own last known settlements, settlers, and plots, so the dashboard opens right away after loading and keeps refreshing quietly in the background. There is no manual scan to run before it becomes useful.
 
 > [!NOTE]
 > NODE is in early development. Features will continue to grow, and community reports are an important part of improving compatibility and stability.
@@ -53,6 +53,16 @@ Settlement information stays ready while you play. The dashboard can open quickl
 - Check pollution, cleanliness, caravan reach, shared caps, and virtual resources.
 - Review SS2 plots by type and see the settlement's available local services.
 
+### 🧱 Plots and Plot Profile
+
+- Open the **Plots** tab to list every SS2 plot in a settlement with its type, name (building plan), owner, occupants (current and max), level, and size.
+- Select a plot to open its **Plot Profile**: a preview of the plot's stage model, its occupants and their status, building plan progress, power, operating costs, and benefits and penalties with readable resource names.
+- When the current stage's model can't be shown, another stage's model is used instead, or **Model Not Available**.
+- While another settler action is still running, the plot's last known details show right away with a notice.
+- Occupant names open their settler profile, and closing it returns to the plot.
+- **Assign / Reassign** a settler from the same settlement. The picker highlights the SPECIAL stats SS2 uses for that building class and lists the best fit first. On full plots it offers to replace an occupant.
+- **Refresh plot**, set its **Upgrade mode** (settlement default, automatic, or manual), or open SS2's **plot menu** or **building plan selector**. Demolish and scrap stay in SS2's own menu.
+
 ### 👥 Population and resident management
 
 - Browse residents who count toward the settlement population, including humans, robots, dogs, and compatible modded actors.
@@ -61,7 +71,14 @@ Settlement information stays ready while you play. The dashboard can open quickl
 - See exact SS2 building-plan names when a resident is assigned to a plot.
 - See vanilla beds, crops, shops, provisioner work, and other supported assignments when no SS2 plot applies.
 - Filter for residents with no home, unemployed residents, and provisioners.
-- Use supported controls for Commandable, Allow Move, Allow Caravan, Move to Player, settlement transfer, Unassign bed, and Unassign job.
+- Select a resident to open the centered **settler profile**:
+  - **Info**: type, settlement, role, and bed, with a warning for a settler with no bed or no home.
+  - **S.P.E.C.I.A.L.** with Skilled, Gifted, and Savant ranks.
+  - **Home**, **Job**, and **Hobby** rows. A plot assignment opens its Plot Profile, and **Assign** opens a plot picker grouped by the assignments SS2 allows on each plot.
+  - **Flags**: Commandable, Allow Move, and Allow Caravan.
+  - **Actions**: Unassign bed, Unassign job, Unassign hobby, Move to Player, and Transfer to another settlement.
+  - A **Status** section (health, vigor rating, rads, and ailments), shown once SS2's advanced settler functions are unlocked.
+- Settler changes wait in a short queue and report a failure if they can't run, instead of being dropped.
 
 ### ⚙️ Settings and quality of life
 
@@ -69,16 +86,21 @@ Settlement information stays ready while you play. The dashboard can open quickl
 - Rebind the open key from the in-game Settings page.
 - Choose the NODE theme or an alternate color theme.
 - Scale the whole dashboard from Settings to fit your screen.
-- Give generic settlers first names and surnames with the Settlers Renaming System. Unique named people are left alone.
-- Adjust background refresh timing for different systems and save sizes.
-- Hide the Scans Update Bar while keeping background updates active.
+- Give generic settlers first names and surnames with the Settlers Renaming System. Unique named people are left alone, unnamed **Worker** settlers are included, and settlers named by other mods through quests keep their names. Each save keeps its own record of renamed settlers.
+- With Nobody's Leaders 3 installed, the **Nobody's Leaders 3 compatibility** setting (on by default) leaves the names it gives settlers alone.
+- Follow background work with the **Status Indicator**, a compact pill at the top of the menu. Select it for details on settlement updates, Sim Settlements updates, recent activity, and any wait on a settler change. It only redraws when something changes, and the **Status Indicator** setting hides it while background updates keep running.
+- Adjust background refresh timing under **Settings → Systems → Scans System → Advanced**: native settlement audits every **120 seconds** and SS2 details every **180 seconds** by default, on separate schedules. Settings still on the old 30-second audit default move to 120 seconds once.
 - Reduce interface animation for smoother use on large settlement networks.
 - NODE appears in the Prisma Dock on the ESC menu.
 - Optionally enable the Console page in Debug settings for status and troubleshooting.
 
 ## Sim Settlements 2 integration
 
-NODE is designed to complement Sim Settlements 2 by making its settlement information easier to review across an entire network.
+NODE is not meant to replace Sim Settlements 2 systems or menus. It offers a cleaner, broader and faster way to use the features SS2 already provides.
+
+NODE never changes or rewrites any SS2 scripts. Those stay untouched. It only calls what SS2 already exposes through its API and Papyrus.
+
+No credit is claimed for SS2's features or functionality. Credit goes to Kinggath and the SS2 Team.
 
 When the information is available, NODE shows:
 
@@ -86,11 +108,11 @@ When the information is available, NODE shows:
 - City leaders and their major, minor, and weakness traits.
 - Residential, agricultural, industrial, martial, municipal, commercial, and recreational plot totals.
 - Exact building-plan names for resident Home, Job, and Hobby assignments.
+- Every plot's building plan, owner, occupants, level, and size, plus the Plot Profile details and actions listed above.
+- The settler profile's Status section, shown once SS2's advanced settler functions are unlocked.
 - Pollution and cleanliness.
 - Clinic, hospital, sanitation, cemetery, communications, and caravan service coverage.
 - Caravan reach, shared caps, virtual storage, and material categories.
-
-NODE does not replace the SS2 management systems. It provides a convenient network dashboard and routes supported resident actions through the appropriate game or framework behavior.
 
 ## Requirements
 
@@ -169,9 +191,10 @@ Install the new version over the existing NODE installation and allow your mod m
 1. Press **Home** while in-game to open the dashboard.
 2. Use **Network Overview** to compare all owned settlements.
 3. Use **Settlement Overview** to inspect one settlement in detail.
-4. Open the **Population** tab to review residents and supported assignments.
-5. Use **Settings** to change the open key, theme, Interface scale, settler renaming, refresh timing, motion, Scans Update Bar, and Console.
-6. Press **Esc** to close NODE.
+4. Open the **Population** tab to review residents, and select one to open their settler profile.
+5. Open the **Plots** tab to review SS2 plots, and select one to open its Plot Profile.
+6. Use **Settings** to change the open key, theme, Interface scale, settler renaming, refresh timing, motion, Status Indicator, and Console.
+7. Press **Esc** to close NODE.
 
 NODE begins building its settlement information after the game is ready. Large or heavily modded saves can take longer to complete their first network-wide update, but already prepared settlement information remains available as newer results arrive.
 
@@ -179,7 +202,7 @@ NODE begins building its settlement information after the game is ready. Large o
 
 - **Missing SS2 details:** Confirm that `NODE.esp`, Workshop Framework, and Sim Settlements 2 are enabled and that their versions match your game runtime.
 - **NODE does not open:** Confirm that Fallout 4 was launched through F4SE and that PrismaUI F4 **2.1.1** is installed.
-- **Interface hitching:** 0.3.0 keeps background updates gentler. If it still feels busy on a large save, enable **Reduce Animations** or increase the complete settlement update interval in Settings.
+- **Interface hitching:** On a large save, enable **Reduce Animations**, or raise **Native settlement audit** and **SS2 detail refresh** under **Settings → Systems → Scans System → Advanced**.
 - **Log location:** `Documents\My Games\Fallout4\F4SE\NODE.log`.
 
 When reporting a problem, please include:
@@ -213,7 +236,7 @@ See [LICENSE](LICENSE) for the terms that apply to NODE's public release files.
 
 <div align="center">
   <strong>NODE</strong><br>
-  <sub>Your settlement network, ready when you need it.</sub><br><br>
+  <sub>Your whole network of settlements, in one place.</sub><br><br>
   <a href="https://www.nexusmods.com/fallout4/mods/107925">Nexus Mods</a> ·
   <a href="https://github.com/NOBOBYoO/NODE/releases">Releases</a>
 </div>
