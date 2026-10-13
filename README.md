@@ -218,6 +218,12 @@ Please report issues through the [NODE Nexus Mods page](https://www.nexusmods.co
 
 AI tools are used during NODE's development for automation, debugging, image generation, and implementation support. Design decisions, feature direction, review, testing, and release responsibility remain under the author's supervision.
 
+## Support
+
+Support for continued development is welcome on Ko-fi.
+
+<a href='https://ko-fi.com/Z7Z028MXCC' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi3.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
 ## Credits
 
 - **Workshop Framework** — [kinggath](https://www.nexusmods.com/fallout4/mods/35004)

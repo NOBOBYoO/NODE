@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.6.1] - 2026-10-13
+
+### 🔄 Changes
+
+- Changed the open key to also close the dashboard when it is pressed while the dashboard is open. With a hold time set, the key closes it after being held for that time and released.
+
+### 🛠️ Fixes
+
+- Fixed settlements taken or lost on Fallout 4 1.10.163 never being added to or removed from the dashboard after the first list was read.
+- Fixed **Pause Scans** on Fallout 4 1.10.163 never showing as paused. The Status Indicator stayed on the interrupted settlement update instead.
+- Fixed the Status Indicator on Fallout 4 1.10.163 never showing **Finding settlements** or settlement update problems. On every game version, **Finding settlements** now also says whether it is waiting for the game's workshop list or for an owned workshop.
+- Fixed the Status Indicator's wait on a settler change clearing when the first of several queued changes finished or when a plot action reported back, and staying on screen for good when a change stalled.
+- Fixed a shorter **Settlement totals** interval on Fallout 4 1.10.163 only taking effect after the update already waiting.
+
 ## [0.6.0] - 2026-10-10
 
 ### ✨ Additions
