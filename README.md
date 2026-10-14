@@ -1,149 +1,222 @@
-<p align="center">
-  <img src="view/node-logo.png" alt="NODE" width="760">
-</p>
+<div align="center">
+  <a href="https://www.nexusmods.com/fallout4/mods/107925">
+    <img src="https://staticdelivery.nexusmods.com/mods/1151/images/107925/107925-1787787810-2113693770.png" alt="NODE — Settlement Network Dashboard" width="820">
+  </a>
 
-<p align="center">
-  <strong>Your whole network of settlements, in one place.</strong><br>
-  A fast in-game dashboard for Fallout 4 and Sim Settlements 2.
-</p>
+  <h1>NODE — Settlement Network Dashboard</h1>
 
-# NODE — Settlement Network Dashboard
+  <p>
+    <strong>Your whole network of settlements, in one place.</strong><br>
+    A fast in-game dashboard for Fallout 4 and Sim Settlements 2.
+  </p>
 
-NODE gives you a live, network-wide view of every settlement you own. It keeps complete per-settlement snapshots ready in memory and in each save, so opening the dashboard or changing settlements paints cached information immediately instead of starting a new scan.
+  <p>
+    <a href="https://www.nexusmods.com/fallout4/mods/107925"><img alt="Download on Nexus Mods" src="https://img.shields.io/badge/NEXUS_MODS-DOWNLOAD_NODE-E7A83A?style=for-the-badge&labelColor=030806&logo=nexusmods&logoColor=D8F5D5"></a>
+    <a href="https://github.com/NOBOBYoO/NODE/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/NOBOBYoO/NODE?style=for-the-badge&label=LATEST_RELEASE&labelColor=123C30&color=78E89A"></a>
+    <a href="https://github.com/NOBOBYoO/NODE/releases"><img alt="Release downloads" src="https://img.shields.io/github/downloads/NOBOBYoO/NODE/total?style=for-the-badge&label=DOWNLOADS&labelColor=123C30&color=2E8F79"></a>
+  </p>
 
-The visual identity follows the NODE palette:
+  <p>
+    <a href="#overview">Overview</a> ·
+    <a href="#features">Features</a> ·
+    <a href="#sim-settlements-2-integration">SS2 Integration</a> ·
+    <a href="#requirements">Requirements</a> ·
+    <a href="#installation">Installation</a> ·
+    <a href="#support-and-troubleshooting">Support</a>
+  </p>
+</div>
 
-| Role | Color | Hex |
-| --- | --- | --- |
-| Foundation | Black | `#030806` |
-| Panels | Dark Green | `#123C30` |
-| Structure | Teal | `#2E8F79` |
-| Primary signal | Phosphor Green | `#78E89A` |
-| Text | Pale Mint | `#D8F5D5` |
-| Activity and warnings | Amber | `#E7A83A` |
+---
 
-## What NODE shows
+## Overview
 
-### Network Overview
+NODE brings your entire settlement network into one clear in-game dashboard. Open it from anywhere to compare settlements, review local needs, inspect residents, and manage supported assignments without travelling from workshop to workshop.
 
-- Every owned settlement in one table.
-- Total population, average happiness, and network-wide food, water, and power.
-- City leaders, defense, build budget, and other key settlement totals.
+Settlement information stays ready while you play. Each save keeps its own last known settlements, settlers, and plots, so the dashboard opens right away after loading and keeps refreshing quietly in the background. There is no manual scan to run before it becomes useful.
 
-### Settlement Overview
+> [!NOTE]
+> NODE is in early development. Features will continue to grow, and community reports are an important part of improving compatibility and stability.
 
-- Population, happiness, food, water, power, defense, beds, and build budget.
-- Applied SS2 city plan and level, city leader, and leader traits.
-- Pollution and cleanliness.
-- SS2 plots by type and local service coverage.
-- Caravan reach, caps, virtual storage, and material categories.
+## Features
 
-### Population
+### 🌐 Network overview
 
-- Residents that contribute to the workshop Population counter, including humans, robots, dogs, and compatible modded actors. Non-population creatures and workshop objects are excluded.
-- SPECIAL, type, sickness state, Home, Job, and Hobby for each resident.
-- Exact SS2 building-plan names for plot assignments.
-- Vanilla bed, farming, vendor, provisioner, and other assignment fallbacks.
-- Filters for No Home, Unemployed, and Provisioners.
+- View every owned settlement in one place.
+- Compare population, happiness, food, water, power, defense, and build budget.
+- See city leaders and other important settlement totals at a glance.
+- Quickly identify communities that need attention.
 
-### Settler profile
+### 🏘️ Settlement overview
 
-Selecting a resident opens a centered settler profile:
+- Review essential workshop totals for the selected settlement.
+- See the active SS2 city plan, city level, leader, and leader traits.
+- Check pollution, cleanliness, caravan reach, shared caps, and virtual resources.
+- Review SS2 plots by type and see the settlement's available local services.
 
-- **Info**: type, settlement, role (Leader, Provisioner, or Settler), and bed, with a warning for a settler with no bed or no home.
-- **S.P.E.C.I.A.L.**: each stat with its Skilled (5+), Gifted (8+), or Savant (10) rank.
-- **Assignments**: Home, Job, and Hobby rows. A plot assignment opens its Plot Profile; **Assign** opens a picker of the settlement's plots, grouped by the assignments SS2 allows on them. Full plots are listed but can't be picked.
-- **Flags**: Commandable, Allow Move, and Allow Caravan.
-- **Actions**: Unassign bed, Unassign job, Unassign hobby, Move to Player, and Transfer to another settlement.
-- A **Status** section (health, vigor rating, rads, and up to three ailments), shown once SS2's advanced settler functions are unlocked.
+### 🧱 Plots and Plot Profile
 
-Settler changes wait in a short queue, so opening another settler or making another change before one starts doesn't drop it. A change that can't run reports a failure.
-
-### Plots
-
-- A **Plots** tab for each settlement lists every SS2 plot with its type, name (building plan), owner, occupants (current and max), level, and size, with filters for each plot type.
-- Selecting a plot opens the **Plot Profile**:
-  - a preview of the plot's stage model. When the current stage's model can't be shown, another stage's model is used instead, or **Model Not Available**;
-  - occupants with their role and status. Names open their settler profile, and closing it returns to the plot;
-  - building plan info: plan, size, level, build stage, occupancy, condition, power, and operating costs;
-  - benefits and penalties with readable resource names.
+- Open the **Plots** tab to list every SS2 plot in a settlement with its type, name (building plan), owner, occupants (current and max), level, and size.
+- Select a plot to open its **Plot Profile**: a preview of the plot's stage model, its occupants and their status, building plan progress, power, operating costs, and benefits and penalties with readable resource names.
+- When the current stage's model can't be shown, another stage's model is used instead, or **Model Not Available**.
 - While another settler action is still running, the plot's last known details show right away with a notice.
-- Plot actions: **Assign / Reassign** a settler from the same settlement (best SPECIAL fit first, with replace options on full plots), **Refresh plot**, **Upgrade mode** (settlement default, automatic, or manual), **Open SS2 plot menu**, and **Change building plan**. Demolish and scrap stay in SS2's own menu.
+- Occupant names open their settler profile, and closing it returns to the plot.
+- **Assign / Reassign** a settler from the same settlement. The picker highlights the SPECIAL stats SS2 uses for that building class and lists the best fit first. On full plots it offers to replace an occupant.
+- **Refresh plot**, set its **Upgrade mode** (settlement default, automatic, or manual), or open SS2's **plot menu** or **building plan selector**. Demolish and scrap stay in SS2's own menu.
 
-### Console and Settings
+### 👥 Population and resident management
 
-- A compact in-game event log for useful status and troubleshooting information. The Console page is off by default and can be turned on in Debug settings.
-- Rebindable open key, NODE and alternate color themes, Interface scale, watermark and scan-line controls, and reduced motion.
-- The **Status Indicator**: a compact pill at the top of the menu. Selecting it opens details on settlement updates and Sim Settlements updates, recent activity, and any wait on a settler change. It can be hidden with the **Status Indicator** setting without stopping background updates.
-- Settlers Renaming System for generic settlers, with an option to name faction and group NPCs as well. Unnamed settlers called **Worker** are renamed too, and settlers named by other mods through quests keep those names. The record of renamed settlers is kept in each save, so turning renaming off restores the right names for that save.
-- **Nobody's Leaders 3 compatibility**: shown only when Nobody's Leaders 3 is installed, on by default. Settlers that Nobody's Leaders 3 names keep those names.
+- Browse residents who count toward the settlement population, including humans, robots, dogs, and compatible modded actors.
+- Keep livestock, defenses, and workshop equipment out of the population list.
+- Review SPECIAL stats, resident type, sickness, Home, Job, and Hobby.
+- See exact SS2 building-plan names when a resident is assigned to a plot.
+- See vanilla beds, crops, shops, provisioner work, and other supported assignments when no SS2 plot applies.
+- Filter for residents with no home, unemployed residents, and provisioners.
+- Select a resident to open the centered **settler profile**:
+  - **Info**: type, settlement, role, and bed, with a warning for a settler with no bed or no home.
+  - **S.P.E.C.I.A.L.** with Skilled, Gifted, and Savant ranks.
+  - **Home**, **Job**, and **Hobby** rows. A plot assignment opens its Plot Profile, and **Assign** opens a plot picker grouped by the assignments SS2 allows on each plot.
+  - **Flags**: Commandable, Allow Move, and Allow Caravan.
+  - **Actions**: Unassign bed, Unassign job, Unassign hobby, Move to Player, and Transfer to another settlement.
+  - A **Status** section (health, vigor rating, rads, and ailments), shown once SS2's advanced settler functions are unlocked.
+- Settler changes wait in a short queue and report a failure if they can't run, instead of being dropped.
+
+### ⚙️ Settings and quality of life
+
+- Press **Home** to open NODE and **Esc** to close it.
+- Rebind the open key from the in-game Settings page.
+- Choose the NODE theme or an alternate color theme.
+- Scale the whole dashboard from Settings to fit your screen.
+- Give generic settlers first names and surnames with the Settlers Renaming System. Unique named people are left alone, unnamed **Worker** settlers are included, and settlers named by other mods through quests keep their names. Each save keeps its own record of renamed settlers.
+- With Nobody's Leaders 3 installed, the **Nobody's Leaders 3 compatibility** setting (on by default) leaves the names it gives settlers alone.
+- Follow background work with the **Status Indicator**, a compact pill at the top of the menu. Select it for details on settlement updates, Sim Settlements updates, recent activity, and any wait on a settler change. It only redraws when something changes, and the **Status Indicator** setting hides it while background updates keep running.
+- Adjust background refresh timing under **Settings → Systems → Scans System → Advanced**: native settlement audits every **120 seconds** and SS2 details every **180 seconds** by default, on separate schedules. Settings still on the old 30-second audit default move to 120 seconds once.
+- Reduce interface animation for smoother use on large settlement networks.
 - NODE appears in the Prisma Dock on the ESC menu.
-- Adjustable background refresh timing for different system and save sizes.
-- **Export network data** (Debug) writes the Network Overview rows to `Data\F4SE\Plugins\NODE\network-debug.json`.
+- Optionally enable the Console page in Debug settings for status and troubleshooting.
 
-## Fast, cache-first scanning
-
-NODE handles workshop discovery, roster construction, classification, aggregation, caching, persistence, and UI serialization in native code. Papyrus is used only for SS2 or Workshop Framework properties and mutations that do not have a safe native equivalent. The script bridge submits raw forms, locations, and numeric values; native code performs the processing.
-
-Default refresh timing:
-
-- Settlement totals: every **15 seconds**.
-- Changed settlement detail: **0.5 seconds** after a change. A changed settlement refreshes on its own, without restarting a totals refresh already in progress.
-- Native settlement audit: every **120 seconds**.
-- SS2 detail refresh: every **180 seconds**, on its own schedule. Full SS2 detail passes wait while a settler action is running.
-- Settlements updated at once: **1**.
-
-These values, plus **Pause Scans**, are under **Settings → Systems → Scans System → Advanced**. Settings still on the old **30-second** audit default move to 120 seconds once; custom values are kept. The Status Indicator can be hidden without disabling background refreshes.
-
-Dashboard data is stored in each save's F4SE co-save and written only when the game saves. After loading a save, the dashboard opens with that save's last known settlements, settlers, and plots, then refreshes them in the background. Old per-character files in `Data\F4SE\Plugins\NODE\cache` are removed on launch.
-
-## Requirements
-
-- [Fallout 4 Script Extender (F4SE)](https://f4se.silverlock.org/)
-- [Address Library for F4SE Plugins](https://www.nexusmods.com/fallout4/mods/47327)
-- [PrismaUI F4](https://www.nexusmods.com/fallout4/mods/105454) **2.1.1**
-- [Workshop Framework](https://www.nexusmods.com/fallout4/mods/35004)
-- [Sim Settlements 2](https://www.nexusmods.com/fallout4/mods/47976)
-- Fallout 4 **1.10.163** (Old-Gen), **1.10.984** (Next-Gen), or **1.11.191+** (Anniversary Edition)
-
-> [!IMPORTANT]
-> **NODE requires PrismaUI F4 2.1.1.**
->
-> `NODE.esp` is required and must be enabled. It contains the small companion quest used for SS2-only metadata and supported settler actions. When it is disabled, the native plugin reports the missing requirement and does not repeatedly attempt partial scans.
-
-## Installation
-
-1. Install F4SE, Address Library, and PrismaUI F4 **2.1.1** for your game version.
-2. Install Workshop Framework and Sim Settlements 2.
-3. Install NODE with Vortex or Mod Organizer 2.
-4. Enable `NODE.esp` in your load order.
-5. Launch the game through F4SE. Press **Home** to open NODE and **Esc** to close it. The open key can be changed in Settings.
-
-`NODE.ini` is created automatically on first launch and is not included in update archives. Existing values remain in place, while settings introduced by newer versions are appended when missing.
-
-## Troubleshooting
-
-- If SS2 information remains unavailable, first confirm that `NODE.esp`, Workshop Framework, and Sim Settlements 2 are enabled.
-- If NODE does not open, confirm that Fallout 4 was launched through F4SE and that PrismaUI F4 **2.1.1** is installed.
-- If the interface feels busy on a large save, enable **Reduce Animations**, or raise **Native settlement audit** and **SS2 detail refresh** under **Settings → Systems → Scans System → Advanced**.
-- The in-game Console groups repeated warnings. The native log is written to the standard F4SE log location as `NODE.log`.
-- When reporting a problem, include the game version, NODE log, load order, affected settlement, and reliable reproduction steps.
-
-## Development
-
-NODE is still evolving, but its runtime scanner, native cache, co-save persistence, UI, and bounded script bridge are structured for real saves and immediate menu rendering. See the [scan architecture](docs/native-scan-architecture.md) for the data boundary and consistency guarantees.
-
-## AI usage disclosure
-
-AI tools are used during development for automation, debugging, image generation, and implementation support. Design decisions, feature direction, review, testing, and release responsibility remain under the author's supervision.
-
-## Sim Settlements 2 disclosure
+## Sim Settlements 2 integration
 
 NODE is not meant to replace Sim Settlements 2 systems or menus. It offers a cleaner, broader and faster way to use the features SS2 already provides.
 
 NODE never changes or rewrites any SS2 scripts. Those stay untouched. It only calls what SS2 already exposes through its API and Papyrus.
 
 No credit is claimed for SS2's features or functionality. Credit goes to Kinggath and the SS2 Team.
+
+When the information is available, NODE shows:
+
+- Applied city plans and city levels.
+- City leaders and their major, minor, and weakness traits.
+- Residential, agricultural, industrial, martial, municipal, commercial, and recreational plot totals.
+- Exact building-plan names for resident Home, Job, and Hobby assignments.
+- Every plot's building plan, owner, occupants, level, and size, plus the Plot Profile details and actions listed above.
+- The settler profile's Status section, shown once SS2's advanced settler functions are unlocked.
+- Pollution and cleanliness.
+- Clinic, hospital, sanitation, cemetery, communications, and caravan service coverage.
+- Caravan reach, shared caps, virtual storage, and material categories.
+
+## Requirements
+
+Install the dependency intended for your Fallout 4 runtime. Use the Old-Gen, Next-Gen, or Anniversary-compatible file offered by each dependency author where applicable.
+
+### 🎮 Fallout 4
+
+[![Supported Fallout 4 versions](https://img.shields.io/badge/FALLOUT_4-1.10.163_%7C_1.10.984_%7C_1.11.191%2B-78E89A?style=for-the-badge&labelColor=123C30&logo=steam&logoColor=D8F5D5)](https://store.steampowered.com/app/377160/Fallout_4/)
+
+Supported runtimes: **1.10.163** (Old-Gen), **1.10.984** (Next-Gen), and **1.11.191 or newer** (Anniversary Edition).
+
+### 🧩 Fallout 4 Script Extender
+
+[![F4SE requirement](https://img.shields.io/badge/F4SE-MATCH_YOUR_GAME_VERSION-78E89A?style=for-the-badge&labelColor=123C30)](https://f4se.silverlock.org/)
+
+Install the F4SE build made for your exact Fallout 4 runtime and always launch the game through F4SE.
+
+### 📚 Address Library for F4SE Plugins
+
+[![Address Library requirement](https://img.shields.io/badge/ADDRESS_LIBRARY-MATCH_YOUR_GAME_VERSION-78E89A?style=for-the-badge&labelColor=123C30)](https://www.nexusmods.com/fallout4/mods/47327)
+
+Choose the Address Library package that matches your Old-Gen, Next-Gen, or Anniversary runtime.
+
+### 🖥️ PrismaUI F4
+
+[![PrismaUI F4 version](https://img.shields.io/badge/PRISMAUI_F4-2.1.1-E7A83A?style=for-the-badge&labelColor=123C30)](https://www.nexusmods.com/fallout4/mods/105454)
+
+NODE currently targets **PrismaUI F4 2.1.1**.
+
+### 🛠️ Workshop Framework
+
+[![Workshop Framework version](https://img.shields.io/badge/WORKSHOP_FRAMEWORK-2.5.0%2B-2E8F79?style=for-the-badge&labelColor=123C30)](https://www.nexusmods.com/fallout4/mods/35004)
+
+Use **Workshop Framework 2.5.0 or newer**, including the author-provided Old-Gen replacer when required by your runtime.
+
+### 🏙️ Sim Settlements 2
+
+[![Sim Settlements 2 version](https://img.shields.io/badge/SIM_SETTLEMENTS_2-3.6.0%2B-2E8F79?style=for-the-badge&labelColor=123C30)](https://www.nexusmods.com/fallout4/mods/47976)
+
+Use **Sim Settlements 2 3.6.0 or newer**. The base SS2 installation or the corresponding All Chapters Pack is supported.
+
+> [!IMPORTANT]
+> **NODE requires PrismaUI F4 2.1.1.**
+>
+> **`NODE.esp` is required and must be enabled.** It provides the companion quest used for SS2 settlement details and supported resident-management controls.
+
+## Installation
+
+### Mod Organizer 2 or Vortex — recommended
+
+1. Install the required dependencies listed above for your game version.
+2. Download NODE from [Nexus Mods](https://www.nexusmods.com/fallout4/mods/107925) or the [GitHub Releases page](https://github.com/NOBOBYoO/NODE/releases).
+3. Install the archive with Mod Organizer 2 or Vortex.
+4. Confirm that **`NODE.esp`** is enabled in your load order.
+5. Launch Fallout 4 through **F4SE**.
+6. Load your game and press **Home** to open NODE.
+
+### Manual installation
+
+1. Install all requirements first.
+2. Open the NODE archive and copy its **`Data`** folder into the Fallout 4 installation folder.
+3. Allow the NODE files to merge into the game's existing **`Data`** folder. Do not create a second `Data\Data` folder.
+4. Enable **`NODE.esp`** with your preferred plugin manager.
+5. Launch Fallout 4 through F4SE and press **Home** in-game.
+
+### Updating NODE
+
+Install the new version over the existing NODE installation and allow your mod manager to replace the older packaged files.
+
+**NODE requires PrismaUI F4 2.1.1.**
+
+`NODE.ini` is created automatically on first launch and is **not shipped in release archives**. Updating NODE therefore does not replace your existing preferences; newly introduced settings are added only when missing.
+
+## Using NODE
+
+1. Press **Home** while in-game to open the dashboard.
+2. Use **Network Overview** to compare all owned settlements.
+3. Use **Settlement Overview** to inspect one settlement in detail.
+4. Open the **Population** tab to review residents, and select one to open their settler profile.
+5. Open the **Plots** tab to review SS2 plots, and select one to open its Plot Profile.
+6. Use **Settings** to change the open key, theme, Interface scale, settler renaming, refresh timing, motion, Status Indicator, and Console.
+7. Press **Esc** to close NODE.
+
+NODE begins building its settlement information after the game is ready. Large or heavily modded saves can take longer to complete their first network-wide update, but already prepared settlement information remains available as newer results arrive.
+
+## Support and troubleshooting
+
+- **Missing SS2 details:** Confirm that `NODE.esp`, Workshop Framework, and Sim Settlements 2 are enabled and that their versions match your game runtime.
+- **NODE does not open:** Confirm that Fallout 4 was launched through F4SE and that PrismaUI F4 **2.1.1** is installed.
+- **Interface hitching:** On a large save, enable **Reduce Animations**, or raise **Native settlement audit** and **SS2 detail refresh** under **Settings → Systems → Scans System → Advanced**.
+- **Log location:** `Documents\My Games\Fallout4\F4SE\NODE.log`.
+
+When reporting a problem, please include:
+
+- Your exact Fallout 4 version.
+- Your NODE version.
+- `NODE.log`, `f4se.log`, and `PrismaUI_F4.log`.
+- The affected settlement and clear reproduction steps, when applicable.
+
+Please report issues through the [NODE Nexus Mods page](https://www.nexusmods.com/fallout4/mods/107925).
+
+## AI usage disclosure
+
+AI tools are used during NODE's development for automation, debugging, image generation, and implementation support. Design decisions, feature direction, review, testing, and release responsibility remain under the author's supervision.
 
 ## Support
 
@@ -153,8 +226,23 @@ Support for continued development is welcome on Ko-fi.
 
 ## Credits
 
-- [Workshop Framework](https://www.nexusmods.com/fallout4/mods/35004) — kinggath
-- [Sim Settlements 2](https://www.nexusmods.com/fallout4/mods/47976) — kinggath and the Sim Settlements 2 Team
-- [PrismaUI F4](https://www.nexusmods.com/fallout4/mods/105454) — StarkMP; Fallout 4 port by NomadsReach / Fallen World
-- [Fallout 4 Script Extender (F4SE)](https://f4se.silverlock.org/) — Ian Patterson, Stephen Abel, and Brendan Borthwick
-- [Address Library for F4SE Plugins](https://www.nexusmods.com/fallout4/mods/47327) — meh321
+- **Workshop Framework** — [kinggath](https://www.nexusmods.com/fallout4/mods/35004)
+- **Sim Settlements 2** — [kinggath and the Sim Settlements 2 Team](https://www.nexusmods.com/fallout4/mods/47976)
+- **PrismaUI F4** — [StarkMP; Fallout 4 port by NomadsReach / Fallen World](https://www.nexusmods.com/fallout4/mods/105454)
+- **Fallout 4 Script Extender (F4SE)** — [Ian Patterson, Stephen Abel, and Brendan Borthwick](https://f4se.silverlock.org/)
+- **Address Library for F4SE Plugins** — [meh321](https://www.nexusmods.com/fallout4/mods/47327)
+
+## Repository notice
+
+This public repository contains NODE release information and approved downloadable packages. NODE's source code is maintained privately and is not distributed from this repository.
+
+See [LICENSE](LICENSE) for the terms that apply to NODE's public release files.
+
+---
+
+<div align="center">
+  <strong>NODE</strong><br>
+  <sub>Your whole network of settlements, in one place.</sub><br><br>
+  <a href="https://www.nexusmods.com/fallout4/mods/107925">Nexus Mods</a> ·
+  <a href="https://github.com/NOBOBYoO/NODE/releases">Releases</a>
+</div>
