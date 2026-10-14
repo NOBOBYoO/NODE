@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.6.2] - 2026-10-14
+
+### 🛠️ Fixes
+
+- Fixed other mods' hotkeys (such as Place Everywhere) staying disabled on Fallout 4 1.10.163 after the dashboard was opened and closed.
+
 ## [0.6.1] - 2026-10-13
 
 ### 🔄 Changes
