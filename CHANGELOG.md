@@ -1,5 +1,35 @@
 # Changelog
 
+## [0.7.0] - 2026-10-31
+
+### ✨ Additions
+
+- Added the **Network Map** page, showing every owned settlement on the world map (Commonwealth, Far Harbor and Nuka-World) with its population, status and supply lines; selecting one opens an info box with its key stats. Far Harbor and Nuka-World show as travel points on the Commonwealth map once found (and the Commonwealth on theirs), linked to the closest connected settlement; selecting one opens that map.
+- Added the **Supply Line Manager** to the Network Map to assign, change and remove supply lines, with broken lines shown until dismissed. Leftover lines (shown on the Pip-Boy with no provisioner) are cleaned up automatically. Managing lines requires rank 1 of the **Local Leader** perk, as in the base game.
+- Added **Auto-Build Supply Lines**, a panel that previews planned lines on the map and then builds them. By default it connects settlements that have no line; **Rebuild all lines** removes every line except Logistics Station 2 lines and builds them again. Provisioners are picked from settlers without a job first, then from settlers with base-game jobs, and plot workers are left alone. A summary lists the new lines, where the provisioners come from and any settlement that can't be connected, with the reason, and a separate list names each settler leaving a base-game job.
+- Added **IDEK's Logistics Station 2** compatibility: its lines are shown read-only and left untouched, and **Ask ILS2 to rebuild** has it rebuild its own lines while the map follows along. Supply line buttons stay locked until the check for Logistics Station 2 lines is done.
+- Added a **Sim Settlements 2 Empire** layer to the Network Map, showing Empire links and each settlement's Empire role once the save has an Empire.
+- Added notifications to the status pill, with an **Alerts** drawer holding the last 100 events grouped by day, and an on-screen ticker while the dashboard is closed. They cover new settlements, city level-ups and leaders, plot construction started and finished, plot improvements, supply lines, scans, settlements under attack or lost to an undefended attack, and settlers. Each type can be switched off under **Settings › Notifications**, and alerts follow the selected color theme.
+- Added **Report a bug** to the Console page and to Settings. It builds a report with NODE, game and F4SE versions, loaded F4SE plugins, key mods, the current save's settlement and supply line status, the last scans, settings, recent Console lines (debug lines optional) and the end of NODE.log. **Copy** puts the full report on the clipboard and **Save to file** writes a .txt file to Documents/My Games/Fallout4/NODE/reports.
+- Added start and finish lines for each settlement scan to the Console, with its duration and settlement count; debug mode also lists each settlement as it is read.
+
+### 🔄 Changes
+
+- Reorganized the **Settings** page into collapsible grouped cards with jump buttons and shorter descriptions. Notification options are hidden while notifications are off.
+- Renamed the settler naming options to the **Settlers Re-Naming System** card, with **Rename generic settlers** and **Rename faction and group members**.
+- Redesigned the **Console** page. A status column shows NODE, game, F4SE and mod versions, scan health and this session's errors and warnings, with **Report a bug** and **Rescan settlements**. The log can be filtered by level and source, searched and paused, selecting a line shows its details, and repeated messages are folded into one line with a count.
+- Changed the dashboard to hide the compass, crosshair and other on-screen elements behind it while it is open.
+- Redesigned **Export Data** in Settings: **Export now** and an optional **Auto-export on save** write settlements, settlers, Sim Settlements 2 plots and supply lines to one JSON file and four CSV files, in a new folder per character and time under Documents/My Games/Fallout4/NODE/export. The old debug export after each full scan is removed.
+
+### 🛠️ Fixes
+
+- Fixed thousands of Papyrus errors being logged while Sim Settlements 2 was still setting up its settlements; NODE now waits until it is ready.
+- Fixed the **Console** page slowing down once its log was full, and a paused log drifting away from the lines being read.
+- Fixed tables, settler profiles, plot badges and highlights staying Pip-Boy green with other color themes.
+- Fixed the **Changelog** page being hard to read with the **White** theme.
+- Fixed errors showing in the same color as warnings with the **NODE** theme.
+- Fixed the **No Home** settlers filter and housing list leaving out human settlers without a bed.
+
 ## [0.6.2] - 2026-10-14
 
 ### 🛠️ Fixes
@@ -183,4 +213,3 @@ I want to thank the following users for reporting issues and helping me test thi
 ## [0.1.0] - 2026-08-27
 
 - First beta release.
-
