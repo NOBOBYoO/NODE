@@ -30,12 +30,12 @@
 
 ## Overview
 
-NODE brings your entire settlement network into one clear in-game dashboard. Open it from anywhere to compare settlements, review local needs, inspect residents, and manage supported assignments without travelling from workshop to workshop.
+Every settlement is a node. Every supply line, a link. NODE pulls the whole network into one in-game dashboard, so every settlement, settler, plot and route in the Commonwealth, Far Harbor and Nuka-World can be read and managed from anywhere, with no trips from workbench to workbench.
 
-Settlement information stays ready while you play. Each save keeps its own last known settlements, settlers, and plots, so the dashboard opens right away after loading and keeps refreshing quietly in the background. There is no manual scan to run before it becomes useful.
+Built for Sim Settlements 2, NODE stays in sync in the background and keeps each save's last known state, so the dashboard opens instantly and is ready the moment a save loads.
 
 > [!NOTE]
-> NODE is in early development. Features will continue to grow, and community reports are an important part of improving compatibility and stability.
+> NODE is in early development. The network keeps growing, and community reports help shape its compatibility and stability.
 
 ## Features
 
@@ -52,6 +52,20 @@ Settlement information stays ready while you play. Each save keeps its own last 
 - See the active SS2 city plan, city level, leader, and leader traits.
 - Check pollution, cleanliness, caravan reach, shared caps, and virtual resources.
 - Review SS2 plots by type and see the settlement's available local services.
+
+### 🗺️ Network Map and supply lines
+
+- The **Network Map** shows every owned settlement on the world map (Commonwealth, Far Harbor and Nuka-World) with its population, status and supply lines. Selecting a settlement opens an info box with its key stats.
+- Far Harbor and Nuka-World appear as travel points with Pip-Boy-style icons once found, linked to the closest connected settlement; selecting one opens that region's map.
+- The **Supply Line Manager** assigns, changes and removes supply lines. Broken lines stay visible until dismissed, and leftover lines with no provisioner are cleaned up automatically. Managing lines requires rank 1 of the **Local Leader** perk, as in the base game.
+- **Auto-Build Supply Lines** previews planned lines on the map, then builds them. By default it connects settlements that have no line; **Rebuild all lines** removes every line except Logistics Station 2 lines and builds them again. Settlers without a job are picked first, then settlers with base-game jobs; plot workers are left alone. A summary lists new lines, provisioner sources, settlers leaving a job and any settlement that can't be connected.
+- **IDEK's Logistics Station 2** compatibility: its lines are shown read-only and left untouched, they are read shortly after a save loads, and **Ask ILS2 to rebuild** has it rebuild its own lines while the map follows along.
+- A **Sim Settlements 2 Empire** layer shows Empire links and each settlement's Empire role once the save has an Empire.
+
+### 🔔 Notifications
+
+- Alerts on the status pill, an **Alerts** drawer with the last 100 events grouped by day, and an on-screen ticker while the dashboard is closed.
+- Covers new settlements, city level-ups and leaders, plot construction and improvements, supply lines, scans, attacks and lost settlements, and settlers. Each type can be switched off under **Settings > Notifications**.
 
 ### 🧱 Plots and Plot Profile
 
@@ -86,19 +100,26 @@ Settlement information stays ready while you play. Each save keeps its own last 
 - Rebind the open key from the in-game Settings page.
 - Choose the NODE theme or an alternate color theme.
 - Scale the whole dashboard from Settings to fit your screen.
-- Give generic settlers first names and surnames with the Settlers Renaming System. Unique named people are left alone, unnamed **Worker** settlers are included, and settlers named by other mods through quests keep their names. Each save keeps its own record of renamed settlers.
+- Give generic settlers first names and surnames with the **Settlers Re-Naming System**. Unique named people are left alone, unnamed **Worker** settlers are included, and settlers named by other mods through quests keep their names. Each save keeps its own record of renamed settlers.
 - With Nobody's Leaders 3 installed, the **Nobody's Leaders 3 compatibility** setting (on by default) leaves the names it gives settlers alone.
 - Follow background work with the **Status Indicator**, a compact pill at the top of the menu. Select it for details on settlement updates, Sim Settlements updates, recent activity, and any wait on a settler change. It only redraws when something changes, and the **Status Indicator** setting hides it while background updates keep running.
 - Adjust background refresh timing under **Settings → Systems → Scans System → Advanced**: native settlement audits every **120 seconds** and SS2 details every **180 seconds** by default, on separate schedules. Settings still on the old 30-second audit default move to 120 seconds once.
 - Reduce interface animation for smoother use on large settlement networks.
 - NODE appears in the Prisma Dock on the ESC menu.
-- Optionally enable the Console page in Debug settings for status and troubleshooting.
+- Settings are grouped into collapsible cards with jump buttons.
+- The compass, crosshair and other on-screen elements are hidden while the dashboard is open.
+- The optional **Console** page (turned on in Settings) shows versions, scan health and a filterable, searchable log.
+
+### 🐞 Bug reports and data export
+
+- **Report a bug** (Console page and Settings) builds a report with versions, loaded F4SE plugins, key mods, settlement and supply line status, recent scans, settings, recent Console lines and the end of `NODE.log`. **Copy** puts it on the clipboard and **Save to file** writes it to `Documents/My Games/Fallout4/NODE/reports`.
+- **Export Data**: **Export now** and optional **Auto-export on save** write settlements, settlers, plots and supply lines to JSON and CSV under `Documents/My Games/Fallout4/NODE/export`.
 
 ## Sim Settlements 2 integration
 
 NODE is not meant to replace Sim Settlements 2 systems or menus. It offers a cleaner, broader and faster way to use the features SS2 already provides.
 
-NODE never changes or rewrites any SS2 scripts. Those stay untouched. It only calls what SS2 already exposes through its API and Papyrus.
+NODE does not change or rewrite any SS2 scripts. Those stay untouched. It only calls what SS2 already exposes through its API and Papyrus.
 
 No credit is claimed for SS2's features or functionality. Credit goes to Kinggath and the SS2 Team.
 
@@ -159,6 +180,8 @@ Use **Sim Settlements 2 3.6.0 or newer**. The base SS2 installation or the corre
 >
 > **`NODE.esp` is required and must be enabled.** It provides the companion quest used for SS2 settlement details and supported resident-management controls.
 
+Optional: **IDEK's Logistics Station 2** and **Nobody's Leaders 3** are detected automatically when installed.
+
 ## Installation
 
 ### Mod Organizer 2 or Vortex — recommended
@@ -193,8 +216,9 @@ Install the new version over the existing NODE installation and allow your mod m
 3. Use **Settlement Overview** to inspect one settlement in detail.
 4. Open the **Population** tab to review residents, and select one to open their settler profile.
 5. Open the **Plots** tab to review SS2 plots, and select one to open its Plot Profile.
-6. Use **Settings** to change the open key, theme, Interface scale, settler renaming, refresh timing, motion, Status Indicator, and Console.
-7. Press **Esc** to close NODE.
+6. Open the **Network Map** to see settlements and supply lines, manage lines, or run **Auto-Build Supply Lines**.
+7. Use **Settings** to change the open key, theme, Interface scale, settler renaming, notifications, data export, refresh timing, motion, Status Indicator, and Console.
+8. Press **Esc** to close NODE.
 
 NODE begins building its settlement information after the game is ready. Large or heavily modded saves can take longer to complete their first network-wide update, but already prepared settlement information remains available as newer results arrive.
 
@@ -205,11 +229,9 @@ NODE begins building its settlement information after the game is ready. Large o
 - **Interface hitching:** On a large save, enable **Reduce Animations**, or raise **Native settlement audit** and **SS2 detail refresh** under **Settings → Systems → Scans System → Advanced**.
 - **Log location:** `Documents\My Games\Fallout4\F4SE\NODE.log`.
 
-When reporting a problem, please include:
+When reporting a problem, use **Report a bug** (Console page or Settings) and save the report. It includes the game, F4SE and NODE versions, loaded plugins and the end of `NODE.log`. Please attach it together with:
 
-- Your exact Fallout 4 version.
-- Your NODE version.
-- `NODE.log`, `f4se.log`, and `PrismaUI_F4.log`.
+- `f4se.log` and `PrismaUI_F4.log`.
 - The affected settlement and clear reproduction steps, when applicable.
 
 Please report issues through the [NODE Nexus Mods page](https://www.nexusmods.com/fallout4/mods/107925).
