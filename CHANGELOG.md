@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.7.1] - 2026-11-04
+
+### 🛠️ Fixes
+
+- Fixed the cursor getting stuck in the middle of the screen when a conversation started while the dashboard was open. A centred notice now explains that the dashboard can't be used during a conversation, hands control to the conversation and closes the dashboard after a 10-second countdown or with its **Close** button. The dashboard can't be opened during a conversation; trying to open it shows a short on-screen notice instead.
+- Fixed **Auto-Build Supply Lines** taking a long time to show its preview with IDEK's Logistics Station 2 installed.
+- Removed a stray dot next to the region name on the **Network Map** tabs.
+
 ## [0.7.0] - 2026-10-31
 
 ### ✨ Additions
