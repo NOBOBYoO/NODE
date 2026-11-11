@@ -1,5 +1,48 @@
 # Changelog
 
+## [0.8.0] - 2026-11-11
+
+### ✨ Additions
+
+- Added sorting to all nine Network table columns, with ascending and descending order.
+
+### 🔄 Changes
+
+- Replaced immediate settler transfer with a full-width settlement list and a confirm step, matching plot assignment. While a transfer is in progress the settler's profile stays locked, with transferring and verifying status, until the transfer has been confirmed.
+
+- Selecting a settlement now also prioritises refreshing that settlement's settler list, without starving other settlements. Open settler and plot profiles refresh when the selected settlement is updated and again after related actions finish. After a verified transfer, both the source and destination settlement lists refresh from current settlement data.
+
+- The **Auto-Build Supply Lines** preview lists settlers who would leave a job with their current job label, matching the Population Job column, and a **Keep job** control. Protecting a settler recalculates the plan and Confirm runs only that plan. Protected settlers appear under **Keeping jobs** and can be allowed again in the same preview. Leaving and keeping rows show the settler name from the settlement, with the job tag underneath.
+
+- Shortened the conversation interruption notice from 10 seconds to 5 seconds.
+
+### 🌿 Quality of Life
+
+- Redesigned the Caravan Network card around a centred Caps panel and matching resource meters. Virtual Storage and materials use equal-width bars, resource icons and amounts with percentages over the meters.
+- Reorganised the City Leader card with a larger name and compact Major Trait, Minor Trait and Weakness rows.
+- Reworked the Network table with icon headings, settlement status dots and stacked resource totals, requirements and colour-coded surplus or deficit values.
+- Refreshed the sidebar with shorter labels, clearer active-page highlighting and recognisable navigation icons.
+- Added Workshop, Pip-Boy and Sim Settlements 2 icons to summary and Settlement overview cards, with service icons reflecting availability.
+- Replaced plot-type colour swatches with type-coloured icons in plot filters and overview counts. Plots, Plot Profiles and Population Job now use the original Sim Settlements 2 building-class icons, coloured by plot type. The Assign Settler list shows the same icon and a Building Class column for the settler's current job, for better decision making when assigning NPCs.
+- The Plots table columns have been re-ordered, and Building Class Icons and Plot Building Class columns have also been introduced.
+- Improved table readability with alternating row shading and clearer selected-row outlines.
+- Highlighted sickness and missing homes in the Population table, with healthy settlers shown in green and sickness or no home shown in red.
+- Added clear **No City Plan** and **No Leader** states when neither is assigned.
+
+### 🛠️ Fixes
+
+- Fixed sticky table headers so scrolled rows no longer show through the title cells.
+- Fixed Assign Settler, settler plot and transfer pickers, and the **Auto-Build Supply Lines** preview so long lists scroll inside the window and Confirm and Back buttons stay visible at any interface scale.
+- Fixed settler jobs being counted for residential plots, beds and the City Planner's Desk; multi-person home occupants now get a proper Home entry, and city leaders are not labelled as vendors. Multi-person Home entries no longer flicker between Bed and the residential plan while the roster refreshes. **Auto-Build Supply Lines** no longer recruits Sim Settlements 2 city leaders or treats those exclusions as work to leave, and preview job tags use the same classification as the Population Job column.
+- After a verified settler transfer, an open profile for the mover closes cleanly instead of leaving a blank sheet.
+- When the destination settlement is not loaded during a transfer, the roster refresh stays queued with a short retry instead of being dropped.
+- Preserved known city plans and leaders when Sim Settlements 2 information is temporarily unavailable, preventing false missing-leader alerts and cleared leader names.
+- Fixed missed plot completion and upgrade alerts when changes are detected during settlement updates.
+- Fixed collapsed Build Budget meters in the Network table.
+- Cleaned corrupted characters in theme and settlement selectors, missing table values, Population breakdown separators, dashboard status text and other interface labels, while retaining the population counts.
+
+---
+
 ## [0.7.1] - 2026-11-04
 
 ### 🛠️ Fixes
