@@ -117,11 +117,9 @@ Built for Sim Settlements 2, NODE stays in sync in the background and keeps each
 
 ## Sim Settlements 2 integration
 
-NODE is not meant to replace Sim Settlements 2 systems or menus. It offers a cleaner, broader and faster way to use the features SS2 already provides.
+NODE builds on what Sim Settlements 2 already offers. It reads SS2's data, like plots, building classes, leaders and city plans, through the functions SS2 provides, and never changes or replaces any of SS2's own code or features. The goal isn't to stand in for SS2, just to give it a clearer, more informative view.
 
-NODE does not change or rewrite any SS2 scripts. Those stay untouched. It only calls what SS2 already exposes through its API and Papyrus.
-
-No credit is claimed for SS2's features or functionality. Credit goes to Kinggath and the SS2 Team.
+NODE isn't affiliated with or endorsed by the Sim Settlements 2 team. The building-class icons come from SS2's own assets, and all credit for them goes to the SS2 Team members who made them.
 
 When the information is available, NODE shows:
 

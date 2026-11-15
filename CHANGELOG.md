@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.8.1] - 2026-11-15
+
+### ✨ Additions
+
+- Added a fallback: holding N for 3 seconds opens the dashboard, even if the open key is taken by another mod.
+- Added a notice when the open key appears to be taken by another mod.
+
+### 🛠️ Fixes
+
+- Fixed notices about broken supply lines or unassigned provisioners firing when the lines were still on the map.
+- Fixed the Network Map failing to load the vanilla world map from next-gen texture archives.
+- Settlers with Allow Move turned off can no longer be transferred between settlements. Move to Player still works.
+- Fixed the settler profile staying open after a verified transfer on Fallout 4 1.10.163.
+
 ## [0.8.0] - 2026-11-11
 
 ### ✨ Additions
