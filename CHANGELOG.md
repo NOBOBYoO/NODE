@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.1] - 2026-11-24
+
+### 🛠️ Fixes
+
+- Fixed **Auto-Build Supply Lines** treating every settler as an animal, so only robots were sent on supply lines. Settlers are now picked following the **Settings > Network Map** choices.
+- Fixed the **Settings > Network Map** choices going back to their defaults the next time the game started.
+
 ## [0.9.0] - 2026-11-24
 
 ### ✨ Additions
