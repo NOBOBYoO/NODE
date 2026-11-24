@@ -1,5 +1,51 @@
 # Changelog
 
+## [0.9.0] - 2026-11-24
+
+### ✨ Additions
+
+- Added **Keep off supply lines** to the settler profile. Auto-Build never sends that settler on a supply line.
+- Added **Set as hub** and **Connect** to a settlement's info box on the Network Map.
+- Added **Network style**, **Use robots**, **Use named settlers**, **Use settlers with jobs** and **Auto-maintain** under **Settings > Network Map**.
+- Added **Link Far Harbor** and **Link Nuka-World** to Auto-Build Supply Lines. Turn a region off to keep it as its own network.
+- Added a **Trains** column to the hobby plot list in the settler profile, showing the S.P.E.C.I.A.L. stat each hobby plot trains.
+- Added **Building Class** and **Level** columns to the plot list in the settler profile.
+- Added **Beds**, **Happiness**, **Food** and **Water** columns to the **Transfer** list.
+- Full plots in the settler profile's plot list can now be picked, with a choice of who to replace.
+- The settler profile now shows a second job plot when Sim Settlements 2 lists a settler on two plots at once, so the extra one can be opened and freed.
+
+### 🔄 Changes
+
+- Reworked **Auto-Build Supply Lines**. The network grows from a hub like Logistics Station 2's, with one line from each settlement, and follows Logistics Station 2's settings when it is installed.
+- **Rebuild all lines** is now **Optimize network**. Lines only move when the network gets clearly shorter.
+- Auto-Build now repairs duplicate and unlinked lines before it builds. The preview lists them under **Line repairs**.
+- Supply lines left behind when a provisioner dies or leaves are now removed automatically.
+- On Fallout 4 1.10.163, settler lists now include people who belong to a settlement but were missing from the list, while that settlement is loaded. Population stays closer to newer versions of the game.
+- On Fallout 4 1.10.163, a settlement update that is still running is not started again.
+- Settlement updates now follow the same steps on Fallout 4 1.10.163 and on newer versions, so a change to updates applies to both.
+- Sim Settlements 2 details now finish the update already running before the next one starts. City plans, plots, and empire info are not started over halfway. A settlement that is not open can keep its last details a little longer.
+- The Network table now fills in each settlement as soon as that settlement has been checked. Settlements that are no longer owned are still removed when the check finishes.
+- Assign lists now grey out settlers Sim Settlements 2 won't allow on a plot, with the stat they're missing.
+- Assigning a plot or confirming a transfer now closes the list straight away. The row being assigned pulses in the profile until Sim Settlements 2 confirms, and the result shows under the action buttons.
+
+### 🌿 Quality of Life
+
+- On Anniversary Edition and next-gen, NODE.log now records how long a full settlement check took to list objects, and how many it listed, so a heavy mod list is easier to see.
+- The Auto-Build preview now shows on the map which routes will be added and which will be removed.
+- The Assign, plot and Transfer lists now share one look, with a title naming the choice and a search box.
+- The settler profile shows Building Class icons before plot names, and the stat a hobby plot trains.
+
+### 🛠️ Fixes
+
+- Fixed the settlement list staying empty on some mod lists after the first settlement is taken.
+- Fixed some settlements repeating their details update after a failed attempt.
+- Fixed supply lines on the Network Map that could not be removed because the settler had no supply line.
+- Fixed the Network Map showing an old list of supply lines on some saves.
+- Fixed supply lines on the Network Map vanishing and coming back.
+- Fixed the plot list and the Transfer list in the settler profile opening at the same time.
+- Fixed the Settlers Re-Naming System giving settlers new names when NODE was opened. Once a settler is renamed, they keep that name.
+- Fixed settlers who share a multi-person plot showing **Bed** or nothing instead of their home, job or hobby plot.
+
 ## [0.8.1] - 2026-11-15
 
 ### ✨ Additions
